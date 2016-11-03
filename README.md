@@ -1,9 +1,9 @@
-<h1>SmartAndroidWidget - Make the android widgets smart&EZ.</h1>
+<h1>SmartAndroidWidgets - Make the android widgets smart&EZ.</h1>
 
-> 这是一个提供 一些让Android开发中一些复杂需求变得简单聪明的Widget的Library。目前提供了：
-> 
-> - 用于Android在**界面加载时不同状态切换**的SmartLoadingLayout
-> - 可用于实现Android中**上拉加载、下拉刷新**的通用ViewGroup - SmartPullableLayout。
+SmartAndroidWidgets是一个提供 一些让Android开发中一些复杂需求变得简单聪明的Widget的Library。目前提供了：
+
+- **SmartLoadingLayout**：可用于Android中**界面加载时的不同状态切换显示**。
+- **SmartPullableLayout**：一个可用于实现Android中**上拉加载、下拉刷新**的通用ViewGroup。
 
 ---
 
@@ -177,9 +177,7 @@ custom_error_view ：
 </RelativeLayout>
 ```
 
-最后不要忘记把对应状态下的view设置给CustomLoadingLayout，完成了这步工作，之后的调用就和DefaultLoadingLayout一致了。
-
-最后也让我们来看一下上述用例的演示效果：
+最后不要忘记把对应状态下的view设置给CustomLoadingLayout，完成了这步工作，之后的调用就和DefaultLoadingLayout一致了。上述用例的演示效果如下：
 
 ![](https://github.com/RawnHwang/SmartAndroidWidgets/blob/master/ScreenShot/3.gif)
 
@@ -233,6 +231,24 @@ SmartPullableLayout的使用实际也非常简单，我们要清楚SmartPullable
 mPullableLayout.stopPullBehavior();
 ```
 
+另外，SmartPullableLayout提供如下的几个视图属性：
+
+```
+<me.hwang.widgets.SmartPullableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:library="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_pullable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    // 设置拉动部分的背景
+    library:smart_ui_background="#ffffee" 
+    // 是否启用下拉功能(true为启用,false为禁用)
+    library:smart_ui_enable_pull_down="false"
+    // 是否启用上拉功能(true为启用,false为禁用)
+    library:smart_ui_enable_pull_up="false">
+```
+
+
 最后，是SmartPullableLayout配合不同View使用的演示效果：
 
 ![](https://github.com/RawnHwang/SmartAndroidWidgets/blob/master/ScreenShot/4.gif)
@@ -246,4 +262,5 @@ mPullableLayout.stopPullBehavior();
 ![](https://github.com/RawnHwang/SmartAndroidWidgets/blob/master/ScreenShot/6.gif)
 
 - 配合RecyclerView使用的效果：
+
 ![](https://github.com/RawnHwang/SmartAndroidWidgets/blob/master/ScreenShot/7.gif)
