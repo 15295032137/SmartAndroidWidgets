@@ -72,26 +72,26 @@ DefaultLoadingLayout的使用非常简单，假设以下是我们的布局文件
 当然，如果您不喜欢DefaultLoadingLayout提供的默认效果。也可以通过提供的一系列自定义的方法接口来打造你心仪的效果：
 
 ```
-        defaultLoadingLayout.replaceLoadingProgress(); // 替换Loading状态界面的进度条View
-        defaultLoadingLayout.setLoadingDescription();  // 设置Loading文本提示
-        defaultLoadingLayout.setLoadingDescriptionColor(); // 设置Loading文本提示的文本颜色
-        defaultLoadingLayout.setLoadingDescriptionTextSize(); // 设置Loading文本提示的字体大小
+defaultLoadingLayout.replaceLoadingProgress(); // 替换Loading状态界面的进度条View
+defaultLoadingLayout.setLoadingDescription();  // 设置Loading文本提示
+defaultLoadingLayout.setLoadingDescriptionColor(); // 设置Loading文本提示的文本颜色
+defaultLoadingLayout.setLoadingDescriptionTextSize(); // 设置Loading文本提示的字体大小
 
-        defaultLoadingLayout.replaceEmptyIcon();   // 替换Empty状态界面的Icon提示
-        defaultLoadingLayout.setEmptyDescription(); // 设置Empty文本提示
-        defaultLoadingLayout.setEmptyDescriptionColor();  // 设置Empty文本提示的文本颜色
-        defaultLoadingLayout.setEmptyDescriptionTextSize(); // 设置Empty文本提示的字体大小
+defaultLoadingLayout.replaceEmptyIcon();   // 替换Empty状态界面的Icon提示
+defaultLoadingLayout.setEmptyDescription(); // 设置Empty文本提示
+defaultLoadingLayout.setEmptyDescriptionColor();  // 设置Empty文本提示的文本颜色
+defaultLoadingLayout.setEmptyDescriptionTextSize(); // 设置Empty文本提示的字体大小
 
-        defaultLoadingLayout.replaceErrorIcon(); // 替换Error状态界面的Icon提示
-        defaultLoadingLayout.setErrorDescription(); // 设置Error文本提示
-        defaultLoadingLayout.setErrorDescriptionColor(); // 设置Error文本提示的文本颜色
-        defaultLoadingLayout.setErrorDescriptionTextSize(); // 设置Error文本提示的字体大小
-        defaultLoadingLayout.setErrorButtonText(); // 设置Error状态界面中的Button文本
-        defaultLoadingLayout.setErrorButtonTextColor(); // 设置Error状态界面中的Button文本颜色
-        defaultLoadingLayout.setErrorButtonBackground(); // 设置Error状态界面中的Button背景
-        defaultLoadingLayout.setErrorButtonListener();  // 为Error Button添加点击监听事件
-        defaultLoadingLayout.replaceErrorButton(); // 替换Error状态界面的Button
-        defaultLoadingLayout.hideErrorButton(); // 隐藏Error状态界面的Button
+defaultLoadingLayout.replaceErrorIcon(); // 替换Error状态界面的Icon提示
+defaultLoadingLayout.setErrorDescription(); // 设置Error文本提示
+defaultLoadingLayout.setErrorDescriptionColor(); // 设置Error文本提示的文本颜色
+defaultLoadingLayout.setErrorDescriptionTextSize(); // 设置Error文本提示的字体大小
+defaultLoadingLayout.setErrorButtonText(); // 设置Error状态界面中的Button文本
+defaultLoadingLayout.setErrorButtonTextColor(); // 设置Error状态界面中的Button文本颜色
+defaultLoadingLayout.setErrorButtonBackground(); // 设置Error状态界面中的Button背景
+defaultLoadingLayout.setErrorButtonListener();  // 为Error Button添加点击监听事件
+defaultLoadingLayout.replaceErrorButton(); // 替换Error状态界面的Button
+defaultLoadingLayout.hideErrorButton(); // 隐藏Error状态界面的Button
 ```
 
 <h4>2.CustomLoadingLayout用例演示 </h4>
@@ -177,7 +177,9 @@ custom_error_view ：
 </RelativeLayout>
 ```
 
-最后不要忘记把对应状态下的view设置给CustomLoadingLayout，完成了这步工作，之后的调用就和DefaultLoadingLayout一致了。上述用例的演示效果如下：
+最后不要忘记把对应状态下的view设置给CustomLoadingLayout，完成了这步工作，之后的调用就和DefaultLoadingLayout一致了。
+
+上述用例的演示效果如下：
 
 ![](https://github.com/RawnHwang/SmartAndroidWidgets/blob/master/ScreenShot/3.gif)
 
@@ -185,12 +187,11 @@ custom_error_view ：
 
 <h3>SmartPullableLayout</h3>
 
-SmartPullableLayout是一个支持垂直方向拉动，并触发上拉、下拉事件的通用Widgets。
+- SmartPullableLayout是一个支持垂直方向拉动，并触发上拉、下拉事件的通用Widgets。
+- SmartPullableLayout可以配合包括普通View，ScrollView，AbsListView，RecyclerView等等View使用。
+- SmartPullableLayout内部已经处理了相关的滑动冲突，并且支持了嵌套滑动机制。
 
-（其内部已经处理了相关的滑动冲突，并且支持嵌套滑动可以放心的配合包括普通的View，ScrollView，AbsListView，RecyclerView使用。其内部已经处理了相关的滑动冲突，并且支持了嵌套滑动）
-
-SmartPullableLayout的使用实际也非常简单，我们要清楚SmartPullableLayout自身是一个ViewGroup。所以：
-我们只需要将想要支持上（下）拉事件的View放进SmartPullableLayout当中存放。
+对于SmartPullableLayout的使用实际非常简单，因为其自身其实就是一个ViewGourp：
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -208,8 +209,7 @@ SmartPullableLayout的使用实际也非常简单，我们要清楚SmartPullable
 </me.hwang.widgets.SmartPullableLayout>
 ```
 
-之后我们只需要在对应的Activity(Fragment)中实例化SmartPullableLayout对象就可以了。
-当然别忘为SmartPullableLayout添加上拉动监听，就像下面这样：
+之后我们只需要在对应的Activity(Fragment)中实例化SmartPullableLayout对象就可以了。当然别忘为SmartPullableLayout添加上拉动监听，就像下面这样：
 
 ```
         mPullableLayout.setOnPullListener(new SmartPullableLayout.OnPullListener() {
@@ -225,13 +225,13 @@ SmartPullableLayout的使用实际也非常简单，我们要清楚SmartPullable
         });
 ```
 
-需要记住的是！！！不要忘记在上（下）拉事件的回调成功执行完毕之后，调用stopPullBehavior方法结束上（下）拉动状态。
+需要记住的是！！！不要忘记在上（下）拉事件的回调成功执行完毕之后，调用stopPullBehavior方法结束（清楚）上/下拉动状态。
 
 ```
 mPullableLayout.stopPullBehavior();
 ```
 
-另外，SmartPullableLayout提供如下的几个视图属性：
+另外，SmartPullableLayout提供如下的几个视图属性供以使用：
 
 ```
 <me.hwang.widgets.SmartPullableLayout
