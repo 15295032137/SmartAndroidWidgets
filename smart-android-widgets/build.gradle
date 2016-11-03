@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0.0"
+version = "1.0.0-rc"
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
@@ -32,8 +32,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
 }
 
-def siteUrl = "https://github.com/RawnHwang/SmartLoadingLayout"
-def gitUrl = "https://github.com/RawnHwang/SmartLoadingLayout.git"
+def siteUrl = "https://github.com/RawnHwang/SmartAndroidWidgets"
+def gitUrl = "https://github.com/RawnHwang/SmartAndroidWidgets.git"
 
 //填写唯一包名
 group = "me.rawnhwang.library"
@@ -46,7 +46,7 @@ install {
                 packaging 'aar'
 
                 //添加项目描述
-                name 'make android ui ez...'
+                name 'Make android widget been easy&smart..'
                 url siteUrl
 
                 //设置开源证书信息

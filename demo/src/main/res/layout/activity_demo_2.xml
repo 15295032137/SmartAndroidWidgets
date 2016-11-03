@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/image_demo" />
+
+    <include
+        android:id="@+id/custom_loading_view"
+        layout="@layout/custom_loading_view"/>
+
+    <include
+        android:id="@+id/custom_empty_view"
+        layout="@layout/custom_empty_view"/>
+
+    <include
+        android:id="@+id/custom_error_view"
+        layout="@layout/custom_error_view"/>
+</RelativeLayout>

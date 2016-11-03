@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SmartAndroidWidgets.iml" filepath="$PROJECT_DIR$/SmartAndroidWidgets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart-android-widgets/smart-android-widgets.iml" filepath="$PROJECT_DIR$/smart-android-widgets/smart-android-widgets.iml" />
     </modules>
   </component>

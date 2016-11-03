@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btn_show_loading_layout_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmartLoadingLayout效果演示(默认效果)" />
+
+    <Button
+        android:id="@+id/btn_show_loading_layout_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmartLoadingLayout效果演示(自定义效果)" />
+
+    <Button
+        android:id="@+id/btn_show_pullable_with_common_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="常用View的下拉刷新效果演示" />
+
+    <Button
+        android:id="@+id/btn_show_pullable_with_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScrollView的下拉刷新、上拉加载效果演示" />
+
+    <Button
+        android:id="@+id/btn_show_pullable_with_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView的下拉刷新、上拉加载效果演示" />
+
+    <Button
+        android:id="@+id/btn_show_pullable_with_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView的下拉刷新、上拉加载效果演示" />
+</LinearLayout>

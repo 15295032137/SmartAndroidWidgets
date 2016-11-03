@@ -11,6 +11,7 @@ import android.support.v4.view.NestedScrollingParent;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -451,10 +452,13 @@ public class SmartPullableLayout extends ViewGroup implements NestedScrollingPar
         if (android.os.Build.VERSION.SDK_INT < 14) {
             if (mTarget instanceof AbsListView) {
                 final AbsListView absListView = (AbsListView) mTarget;
-                return absListView.getChildCount() > 0 && (absListView.getLastVisiblePosition() != absListView.getCount()
+                return absListView.getChildCount() > 0 && (absListView.getLastVisiblePosition() != absListView.getCount() -1
                         || absListView.getChildAt(absListView.getChildCount() - 1).getBottom() > absListView.getMeasuredHeight());
             } else {
-                return ViewCompat.canScrollVertically(mTarget, 1) || mTarget.getScrollY() < mTarget.getMeasuredHeight();
+                if(mTarget instanceof ViewGroup)
+                    return ViewCompat.canScrollVertically(mTarget, 1) || mTarget.getScrollY() < ((ViewGroup)mTarget).getChildAt(0).getMeasuredHeight() - mTarget.getMeasuredHeight();
+
+                return ViewCompat.canScrollVertically(mTarget, 1) || mTarget.getScrollY() < mTarget.getMeasuredHeight() - getMeasuredHeight();
             }
         } else {
             return ViewCompat.canScrollVertically(mTarget, 1);

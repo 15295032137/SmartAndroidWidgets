@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.hwang.widgets.SmartPullableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_pullable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="文章标题"
+                android:textSize="32sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0f0f0f" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="10dp"
+                android:text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </ScrollView>
+</me.hwang.widgets.SmartPullableLayout>
