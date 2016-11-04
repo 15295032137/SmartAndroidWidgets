@@ -10,7 +10,7 @@ SmartAndroidWidgets是一个提供 一些让Android开发中一些复杂需求�
 <h2>使用需知</h2>
 
 - Required min SDK version : **API 11**。
--     compile 'me.rawnhwang.library:smart-android-widgets:1.0.0-rc'
+-     compile 'me.rawnhwang.library:smart-android-widgets:1.0.0'
 
 ---
 
