@@ -144,6 +144,7 @@ public class SmartPullableLayout extends ViewGroup implements NestedScrollingPar
         float offset = (ivArrowPullDown.getRotation() + 180) % 180;
         ObjectAnimator arrowAnimator = ObjectAnimator.ofFloat(ivArrowPullDown, "rotation",
                 ivArrowPullDown.getRotation(), ivArrowPullDown.getRotation() + 180 - offset);
+		arrowAnimator.setDuration(135);
         arrowAnimator.start();
     }
 
